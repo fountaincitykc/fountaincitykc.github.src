@@ -351,8 +351,9 @@ Components */
   display: flex;
   justify-content: center;
   align-items: stretch;
-  min-height: 600px;
+  min-height: 400px;
   margin-bottom: var(--spacer-xxl);
+  padding: var(--spacer);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -373,11 +374,23 @@ Components */
   color: var(--white);
   font-size: var(--font-size-h3);
 }
+@media (min-width: 576px) {
+  .hero {
+    min-height: 500px;
+  }
+}
+@media (min-width: 768px) {
+  .hero {
+    min-height: 600px;
+  }
+}
 
 /* hero : options */
 
-.hero.fixed {
-  background-attachment: fixed;
+@media (min-width: 992px) {
+  .hero.fixed {
+    background-attachment: fixed;
+  }
 }
 
 /* cards */
@@ -509,9 +522,11 @@ Components */
 
 /* content-blurb : options */
 
-.content-blurb.center-content .content,
-.content-blurb.center-content .content p {
-  text-align: center;
+@media (min-width: 576px) {
+  .content-blurb.center-content .content,
+  .content-blurb.center-content .content p {
+    text-align: center;
+  }
 }
 
 /* -----------------------------------------------------------------------------
@@ -770,8 +785,7 @@ body.js-nav.show-nav .main-nav {
 
 .page-header {
   margin-bottom: var(--spacer-xxl);
-  padding-top: var(--spacer-xxl);
-  padding-bottom: var(--spacer-xxl);
+  padding: var(--spacer-xxl) var(--spacer);
   background-color: var(--blue);
   background-image: url(/images/header.jpg);
   background-repeat: no-repeat;
