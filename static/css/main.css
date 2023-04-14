@@ -804,6 +804,17 @@ Pages */
   max-width: 960px;
 }
 
+/* 404 */
+
+.error {
+  padding-top: var(--spacer-xxl);
+  padding-bottom: var(--spacer-xxl);
+}
+.error p {
+  font-size: var(--font-size-large);
+  text-align: center;
+}
+
 /* -----------------------------------------------------------------------------
 Debug */
 /*
