@@ -1,0 +1,34 @@
+{{ define "main" }}
+<div class="about">
+  <div class="container">
+    <<div class="content-blurb mission">
+      <div class="body">
+        <h3>
+          {{ .Params.mission.title }}
+        </h3>
+        <div class="content">
+          {{ .Params.mission.content | markdownify }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero fixed" style="background-image:url('{{ .Params.hero.photo }}');"></div>
+  <div class="container">
+    <div class="content-blurb story">
+      <div class="body">
+        <h3>
+          {{ .Params.story.title }}
+        </h3>
+        <div class="content">
+          {{ .Params.story.content | markdownify }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}
+
+
+
+
+          

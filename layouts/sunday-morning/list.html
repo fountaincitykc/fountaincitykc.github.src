@@ -1,0 +1,52 @@
+{{ define "main" }}
+<div class="sunday-morning">
+  <div class="container">
+    <div class="content-sections">
+      {{ range .Params.sections }}
+        <div class="content-section">
+          <div class="photo">
+            <img src="{{ .photo }}" alt="{{ safeHTMLAttr .title }}">
+          </div>
+          <div class="body">
+            <h3>
+              {{ .title }}
+            </h3>
+            <div class="content">
+              {{ .content | markdownify }}
+            </div>
+            {{ if .button }}
+              <a href="{{ .button.href }}" class="text-button">{{ .button.text }}</a>
+            {{ end }}
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+  <div class="hero fixed" style="background-image:url('{{ .Params.hero.photo }}');"></div>
+  <div class="container">
+    <div class="content-blurbs">
+        <div class="content-blurb location">
+          <div class="body">
+            <h3>
+              {{ .Params.location.title }}
+            </h3>
+            <div class="content">
+              {{ .Params.location.content | markdownify }}
+            </div>
+          </div>
+        </div>
+        <div class="content-blurb center-content directions">
+          <div class="body">
+            <h3>
+              {{ .Params.directions.title }}
+            </h3>
+            <div class="content">
+              {{ .Params.directions.content | safeHTML }}
+            </div>
+              <a href="{{ .Params.directions.button.href }}" class="button">{{ .Params.directions.button.text }}</a>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+{{ end }}

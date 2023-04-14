@@ -1,0 +1,38 @@
+{{ define "main" }}
+<div class="connect">
+  <div class="container">
+    <div class="content-sections">
+      {{ range .Params.sections }}
+        <div class="content-section">
+          <div class="photo">
+            <img src="{{ .photo }}" alt="">
+          </div>
+          <div class="body">
+            <h3>
+              {{ .title }}
+            </h3>
+            <div class="content">
+              {{ .content | markdownify }}
+            </div>
+            {{ if .button }}
+              <a href="{{ .button.href }}" class="more text-button">{{ .button.text }}</a>
+            {{ end }}
+          </div>
+        </div>
+      {{ end }}
+    </div>
+    <div class="content-blurb center-content contact">
+      <div class="body">
+        <h3>
+          {{ .Params.contact.title }}
+        </h3>
+        <div class="content">
+          {{ .Params.contact.content | markdownify }}
+        </div>
+        <a href="{{ .Params.contact.button.href }}" target="_blank" class="button">{{ .Params.contact.button.text }}</a>
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}
+

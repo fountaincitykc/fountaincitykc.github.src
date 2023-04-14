@@ -1,0 +1,52 @@
+{{ define "main" }}
+<div class="home">
+  <div class="hero" style="background-image:url('{{ .Params.hero.photo }}');">
+      <div class="body">
+        <h1>
+          {{ .Params.hero.headline }}
+        </h1>
+        <hr>
+        <h2>
+          {{ .Params.hero.subhead }}
+        </h2>
+      </div>
+  </div>
+  <div class="container">
+    <div class="cards">
+      {{ range .Params.cards }}
+        <div class="card">
+          <div class="photo">
+            <img src="{{ .photo }}" alt="{{ safeHTMLAttr .title }}">
+          </div>
+          <div class="body">
+            <h3>
+              {{ .title }}
+            </h3>
+            <hr>
+            <div class="summary">
+              {{ .summary | markdownify }}
+            </div>
+            {{ if .button }}
+              <a href="{{ .button.href }}" class="button">{{ .button.text }}</a>
+            {{ end }}
+          </div>
+        </div>
+      {{ end }}
+    </div>
+    <div class="content-section vertical-center sermon">
+      <div class="photo">
+        <img src="{{ .Params.sermon.photo }}" alt="{{ safeHTMLAttr .Params.sermon.title }}">
+      </div>
+      <div class="body">
+        <h3>
+          {{ .Params.sermon.title }}
+        </h3>
+        <div class="content">
+          {{ .Params.sermon.content | markdownify }}
+        </div>
+        <a href="{{ .Params.sermon.button.href }}" class="button">{{ .Params.sermon.button.text }}</a>
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}
