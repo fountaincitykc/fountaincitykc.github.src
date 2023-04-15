@@ -428,6 +428,16 @@ Components */
   margin-top: -16px;
   font-weight: var(--font-weight-bold);
 }
+@media (min-width: 576px) {
+  .promo {
+    min-height: 300px;
+  }
+}
+@media (min-width: 768px) {
+  .promo {
+    min-height: 400px;
+  }
+}
 
 /* cards */
 
