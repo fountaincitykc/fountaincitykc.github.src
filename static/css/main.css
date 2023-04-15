@@ -898,6 +898,7 @@ Pages */
 
 /* -----------------------------------------------------------------------------
 Debug */
+
 /*
 * { background-color: rgba(255,0,0,.2); }
 * * { background-color: rgba(0,255,0,.2); }
@@ -908,4 +909,44 @@ Debug */
 * * * * * * * { background-color: rgba(255,0,0,.2); }
 * * * * * * * * { background-color: rgba(0,255,0,.2); }
 * * * * * * * * * { background-color: rgba(0,0,255,.2); }
+*/
+
+/*
+.debug {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 4px 8px;
+  color: #fff;
+  background-color: #000;
+  font-family: monospace;
+}
+.debug::before {
+  content: '--';
+}
+@media (min-width: 576px) {
+  .debug::before {
+    content: 'sm';
+  }
+}
+@media (min-width: 768px) {
+  .debug::before {
+    content: 'md';
+  }
+}
+@media (min-width: 992px) {
+  .debug::before {
+    content: 'lg';
+  }
+}
+@media (min-width: 1200px) {
+  .debug::before {
+    content: 'xl';
+  }
+}
+@media (min-width: 1400px) {
+  .debug::before {
+    content: 'xxl';
+  }
+}
 */
