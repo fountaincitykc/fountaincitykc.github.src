@@ -4,7 +4,7 @@ title:
 hero:
   headline: Welcome to Fountain City Church
   subhead: Sundays at 10
-  photo: /images/hero-placeholder.jpg
+  photo: /images/hero-home.jpg
 
 cards:
 - title: Sundays
