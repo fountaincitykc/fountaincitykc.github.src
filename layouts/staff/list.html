@@ -18,7 +18,7 @@
               <a href="mailto:{{ .email }}">{{ .email }}</a>
             </h5>
             <div class="content">
-              {{ .content | markdownify }}
+              {{ .contentHTML | safeHTML }}
             </div>
           </div>
         </div>

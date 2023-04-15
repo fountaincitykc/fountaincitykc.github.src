@@ -23,8 +23,10 @@
               {{ .title }}
             </h3>
             <hr>
-            <div class="summary">
-              {{ .summary | markdownify }}
+            <div class="content">
+              <p>
+                {{ .content }}
+              </p>
             </div>
             {{ if .button }}
               <a href="{{ .button.href }}" class="button">{{ .button.text }}</a>
@@ -42,7 +44,7 @@
           {{ .Params.sermon.title }}
         </h3>
         <div class="content">
-          {{ .Params.sermon.content | markdownify }}
+          {{ .Params.sermon.contentHTML | safeHTML }}
         </div>
         <a href="{{ .Params.sermon.button.href }}" class="button">{{ .Params.sermon.button.text }}</a>
       </div>
@@ -53,12 +55,21 @@
           <h3>
             {{ .Params.event.headline }}
           </h3>
-          <hr>
-          <h4>
-            {{ .Params.event.subhead }}
-          </h4>
+          {{ if .Params.event.subhead1 }}
+            <hr>
+            <h4>
+              {{ .Params.event.subhead1 }}
+            </h4>
+            {{ if .Params.event.subhead2 }}
+              <h5>
+                {{ .Params.event.subhead2 }}
+              </h5>
+            {{ end }}
+          {{ end }}
           <div class="content">
-            {{ .Params.event.content | markdownify }}
+            <p>
+              {{ .Params.event.content }}
+            </p>
           </div>
         </div>
       </div>

@@ -4,7 +4,7 @@
     <div class="content-blurb overview">
       <div class="body">
         <div class="content highlight-lead">
-          {{ .Params.overview.content | markdownify }}
+          {{ .Params.overview.contentHTML | safeHTML }}
         </div>
       </div>
     </div>
@@ -20,7 +20,7 @@
           {{ .Params.section.title }}
         </h3>
         <div class="content">
-          {{ .Params.section.content | markdownify }}
+          {{ .Params.section.contentHTML | safeHTML }}
         </div>
       </div>
     </div>

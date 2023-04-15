@@ -12,7 +12,7 @@
               {{ .title }}
             </h3>
             <div class="content">
-              {{ .content | markdownify }}
+              {{ .contentHTML | safeHTML }}
             </div>
             {{ if .button }}
               <a href="{{ .button.href }}" class="text-button">{{ .button.text }}</a>
@@ -31,7 +31,7 @@
               {{ .Params.location.title }}
             </h3>
             <div class="content">
-              {{ .Params.location.content | markdownify }}
+              {{ .Params.location.contentHTML | safeHTML }}
             </div>
           </div>
         </div>
@@ -41,7 +41,7 @@
               {{ .Params.directions.title }}
             </h3>
             <div class="content">
-              {{ .Params.directions.content | safeHTML }}
+              {{ .Params.directions.contentHTML | safeHTML }}
             </div>
               <a href="{{ .Params.directions.button.href }}" class="button">{{ .Params.directions.button.text }}</a>
           </div>

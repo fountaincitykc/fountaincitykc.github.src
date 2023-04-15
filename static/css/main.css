@@ -437,6 +437,10 @@ Components */
   color: var(--white);
   font-weight: var(--font-weight-bold);
 }
+.promo h5 {
+  margin-top: calc(var(--spacer-sm) * -1);/* negative margin */
+  color: var(--white);
+}
 .promo hr {
   width: 48px;
   margin-bottom: var(--spacer);
@@ -477,7 +481,7 @@ Components */
 }
 
 .card {
-  background-color: var(--gray-light);
+  background-color: var(--blue-a10);
   border-radius: var(--border-radius);
   overflow: hidden;
 }
@@ -490,11 +494,8 @@ Components */
   padding: var(--spacer);
   text-align: center;
 }
-.card .summary {
+.card .button {
   margin-bottom: var(--spacer);
-}
-.card .summary p:last-of-type {
-  margin-bottom: 0;
 }
 .card hr {
   width: 48px;
@@ -538,12 +539,6 @@ Components */
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-normal);
 }
-.content-section .content {
-  margin-bottom: var(--spacer);
-}
-.content-section .content p:last-of-type {
-  margin-bottom: 0;
-}
 
 @media (min-width: 768px) {
   .content-section  {
@@ -575,12 +570,6 @@ Components */
 }
 .content-blurb h3 {
   font-size: var(--font-size-h2);
-}
-.content-blurb .content {
-  margin-bottom: var(--spacer);
-}
-.content-blurb .content p:last-of-type {
-  margin-bottom: 0;
 }
 @media (min-width: 576px) {
   .content-blurb {
@@ -860,7 +849,6 @@ body.js-nav.show-nav .main-nav {
 .page-header {
   margin-bottom: var(--spacer-xxl);
   padding: var(--spacer-xxl) var(--spacer);
-  background-color: var(--blue);
   background-image: url(/images/header.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -870,6 +858,7 @@ body.js-nav.show-nav .main-nav {
 .page-header h2 {
   margin-bottom: 0;
   color: var(--white);
+  font-weight: var(--font-weight-thin);
 }
 
 /* -----------------------------------------------------------------------------

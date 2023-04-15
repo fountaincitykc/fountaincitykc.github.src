@@ -7,7 +7,7 @@
           {{ .Params.mission.title }}
         </h3>
         <div class="content">
-          {{ .Params.mission.content | markdownify }}
+          {{ .Params.mission.contentHTML | safeHTML }}
         </div>
       </div>
     </div>
@@ -20,7 +20,7 @@
           {{ .Params.story.title }}
         </h3>
         <div class="content">
-          {{ .Params.story.content | markdownify }}
+          {{ .Params.story.contentHTML | safeHTML }}
         </div>
       </div>
     </div>
