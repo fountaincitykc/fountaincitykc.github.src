@@ -47,6 +47,7 @@ Variables */
   --font-size-h4: 24px;
   --font-size-h5: 16px;
   --font-size-h6: 14px;
+  --font-weight-thin: 200;
   --font-weight-light: 300;
   --font-weight-normal: 400;
   --font-weight-bold: 500;
@@ -74,6 +75,14 @@ Fonts */
   font-display: swap;
   font-family: 'Inter';
   font-style: normal;
+  font-weight: 200;
+  src: url('/fonts/inter-v12-latin-200.woff2') format('woff2'),
+       url('/fonts/inter-v12-latin-200.woff') format('woff');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
   font-weight: 300;
   src: url('/fonts/inter-v12-latin-300.woff2') format('woff2'),
        url('/fonts/inter-v12-latin-300.woff') format('woff');
@@ -94,14 +103,14 @@ Fonts */
   src: url('/fonts/inter-v12-latin-500.woff2') format('woff2'),
        url('/fonts/inter-v12-latin-500.woff') format('woff');
 }
-@font-face {
+/*@font-face {
   font-display: swap;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 600;
   src: url('/fonts/inter-v12-latin-600.woff2') format('woff2'),
        url('/fonts/inter-v12-latin-600.woff') format('woff');
-}
+}*/
 
 /* -----------------------------------------------------------------------------
 Styles */
@@ -372,6 +381,7 @@ Components */
 }
 .hero h1 {
   color: var(--white);
+  font-weight: var(--font-weight-thin);
 }
 .hero h2 {
   color: var(--white);
@@ -418,15 +428,23 @@ Components */
   align-self: center;
   text-align: center;
 }
-.promo .body > * {
-  color: var(--white);
-}
 .promo h3 {
+  color: var(--white);
   font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-thin);
 }
 .promo h4 {
-  margin-top: -16px;
+  color: var(--white);
   font-weight: var(--font-weight-bold);
+}
+.promo hr {
+  width: 48px;
+  margin-bottom: var(--spacer);
+  border-top: 1px solid var(--white-a50);
+}
+.promo .content,
+.promo .content p {
+  color: var(--white);
 }
 @media (min-width: 576px) {
   .promo {
