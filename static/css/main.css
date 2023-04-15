@@ -501,12 +501,12 @@ Components */
   font-size: var(--font-size-h2);
 }
 .content-section h4 {
-  margin-top: -16px;
+  margin-top: calc(var(--spacer-sm) * -1);/* negative margin */
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-bold);
 }
 .content-section h5 {
-  margin-top: -16px;
+  margin-top: calc(var(--spacer-sm) * -1);/* negative margin */
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-normal);
 }
