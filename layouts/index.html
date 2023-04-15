@@ -47,6 +47,21 @@
         <a href="{{ .Params.sermon.button.href }}" class="button">{{ .Params.sermon.button.text }}</a>
       </div>
     </div>
+    {{ if eq .Params.event.active true }}
+      <div class="promo event" style="background-image:url('{{ .Params.event.photo }}');">
+        <div class="body">
+          <h3>
+            {{ .Params.event.headline }}
+          </h3>
+          <h4>
+            {{ .Params.event.subhead }}
+          </h4>
+          <div class="content">
+            {{ .Params.event.content | markdownify }}
+          </div>
+        </div>
+      </div>
+    {{ end }}
   </div>
 </div>
 {{ end }}

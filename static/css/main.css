@@ -140,6 +140,7 @@ main {
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: var(--spacer);
+  font-family: var(--font-family-base);
   line-height: var(--line-height-header);
 }
 
@@ -160,19 +161,26 @@ h3 {
 
 h4 {
   font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-normal);
 }
 
 h5 {
   font-size: var(--font-size-h5);
+  font-weight: var(--font-weight-normal);
 }
 
 h6 {
   font-size: var(--font-size-h6);
+  font-weight: var(--font-weight-normal);
 }
 
 p, ul, ol, address {
   margin-top: 0;
   margin-bottom: var(--spacer);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-base);
 }
 
 ul, ol {
@@ -365,14 +373,14 @@ Components */
 .hero h1 {
   color: var(--white);
 }
+.hero h2 {
+  color: var(--white);
+  font-size: var(--font-size-h3);
+}
 .hero hr {
   width: 48px;
   margin-bottom: var(--spacer);
   border-top: 1px solid var(--white-a50);
-}
-.hero h2 {
-  color: var(--white);
-  font-size: var(--font-size-h3);
 }
 @media (min-width: 576px) {
   .hero {
@@ -391,6 +399,34 @@ Components */
   .hero.fixed {
     background-attachment: fixed;
   }
+}
+
+/* promo */
+
+.promo {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  margin-bottom: var(--spacer-xxl);
+  padding: var(--spacer-xxl) var(--spacer);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: var(--border-radius);
+}
+.promo .body {
+  align-self: center;
+  text-align: center;
+}
+.promo .body > * {
+  color: var(--white);
+}
+.promo h3 {
+  font-size: var(--font-size-h2);
+}
+.promo h4 {
+  margin-top: -16px;
+  font-weight: var(--font-weight-bold);
 }
 
 /* cards */
@@ -463,6 +499,16 @@ Components */
 }
 .content-section h3 {
   font-size: var(--font-size-h2);
+}
+.content-section h4 {
+  margin-top: -16px;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+}
+.content-section h5 {
+  margin-top: -16px;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
 }
 .content-section .content {
   margin-bottom: var(--spacer);
@@ -800,17 +846,6 @@ body.js-nav.show-nav .main-nav {
 
 /* -----------------------------------------------------------------------------
 Pages */
-
-/* staff */
-
-.staff .content-section h3 {
-  margin-bottom: var(--spacer-xs);
-}
-.staff .content-section h4 {
-  margin-bottom: 0;
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-bold);
-}
 
 /* what-we-believe */
 
