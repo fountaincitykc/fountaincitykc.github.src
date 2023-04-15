@@ -38,7 +38,7 @@ event:
   active: true
   headline: Party in the Park
   subhead: "June 14, 6-8pm"
-  photo: /images/hero-placeholder.jpg
+  photo: /images/party-in-the-park.jpg
   content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 
 ---
