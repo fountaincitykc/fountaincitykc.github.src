@@ -35,7 +35,7 @@ sermon:
     href: https://www.youtube.com/channel/UCSnN3LsmU8VjIPS3hk68SLQ
 
 event:
-  active: true
+  active: false
   headline: Party in the Park
   subhead1: "June 14, 6-8pm"
   subhead2: Meadowbrook Park Grand Pavilion

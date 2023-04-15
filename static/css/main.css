@@ -864,6 +864,21 @@ body.js-nav.show-nav .main-nav {
 /* -----------------------------------------------------------------------------
 Pages */
 
+/* home */
+
+.party-in-the-park {
+  background-image: url(/images/party-in-the-park-bkgd.png);
+  background-size: 340px 340px;
+  background-repeat: repeat-x;
+  background-position: top left;
+  background-color: #42969C;
+  padding-bottom: 0;
+}
+.party-in-the-park img {
+  display: block;
+  margin: 0 auto;
+}
+
 /* what-we-believe */
 
 .what-we-believe > .container {
