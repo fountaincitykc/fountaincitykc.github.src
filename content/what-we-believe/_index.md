@@ -47,4 +47,4 @@ make disciples of all nations. Obedience to the Great Commission requires total 
 service. “For we are His workmanship, created in Christ Jesus for good works, which God
 prepared beforehand that we should walk in them.” (Eph. 2:10)
 
-These Essentials are set forth in greater detail in the Westminster [Confession of Faith](https://www.pcaac.org/bco/westminster-confession/).
+These Essentials are set forth in greater detail in the [Westminster Confession of Faith](https://www.pcaac.org/bco/westminster-confession/).
