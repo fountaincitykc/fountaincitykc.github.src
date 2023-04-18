@@ -113,7 +113,7 @@ Fonts */
 }*/
 
 /* -----------------------------------------------------------------------------
-Styles */
+Foundation */
 
 html {
   box-sizing: border-box;
@@ -175,12 +175,12 @@ h4 {
 
 h5 {
   font-size: var(--font-size-h5);
-  font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-bold);
 }
 
 h6 {
   font-size: var(--font-size-h6);
-  font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-bold);
 }
 
 p, ul, ol, address {
@@ -227,16 +227,36 @@ a:active {
   text-decoration: underline;
 }
 
-strong {
+strong, b {
   font-weight: var(--font-weight-bold);
 }
 
 hr {
   box-sizing: content-box;
   height: 0;
+  margin-bottom: var(--spacer);
   overflow: visible;
   border: none;
   border-top: 1px solid var(--black-a30);
+}
+
+/* -----------------------------------------------------------------------------
+Utilities */
+
+/* subhead */
+
+.subhead {
+  margin-top: calc(var(--spacer-sm) * -1);/* negative top margin */
+}
+
+/* callout, callout-lead */
+
+.callout,
+.callout-lead > p:first-of-type {
+  padding: var(--spacer);
+  background-color: var(--blue-a10);
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-large);
 }
 
 /* -----------------------------------------------------------------------------
@@ -245,7 +265,12 @@ Components */
 /* container */
 
 .container,
-.container-fluid {
+.container-fluid,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl,
+.container-xxl {
   width: 100%;
   padding-right: var(--spacer);
   padding-left: var(--spacer);
@@ -253,38 +278,44 @@ Components */
   margin-left: auto;
 }
 @media (min-width: 576px) {
-  .container {
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl,
+  .container-xxl {
     max-width: 540px;
   }
 }
 @media (min-width: 768px) {
-  .container {
+  .container,
+  .container-md,
+  .container-lg,
+  .container-xl,
+  .container-xxl {
     max-width: 720px;
   }
 }
 @media (min-width: 992px) {
-  .container {
+  .container,
+  .container-lg,
+  .container-xl,
+  .container-xxl {
     max-width: 960px;
   }
 }
 @media (min-width: 1200px) {
-  .container {
+  .container,
+  .container-xl,
+  .container-xxl {
     max-width: 1140px;
   }
 }
 @media (min-width: 1400px) {
-  .container {
+  .container,
+  .container-xxl {
     max-width: 1320px;
   }
-}
-
-/* highlight-lead */
-
-.highlight-lead > p:first-of-type {
-  padding: var(--spacer);
-  background-color: var(--blue-a10);
-  border-radius: var(--border-radius);
-  font-size: var(--font-size-large);
 }
 
 /* button */
@@ -329,37 +360,17 @@ Components */
   padding: 1rem 1.75rem;
   font-size: var(--font-size-large);
 }
-
-/* text-button */
-
-.text-button {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  color: var(--blue);
-  background-color: transparent;
-  border-radius: var(--border-radius);
-  white-space: nowrap;
-  vertical-align: middle;
-  text-align: center;
-  text-decoration: none;
-  font-family: var(--font-family-base);
-  font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-base);
-  transition: background-color .1s ease-in-out;
-}
-.text-button:focus {
-  outline: 0;
-}
-.text-button:hover {
+.button.light {
   color: var(--blue);
   background-color: var(--blue-a10);
-  text-decoration: none;
 }
-.text-button:active {
+.button.light:hover {
   color: var(--blue);
   background-color: var(--blue-a20);
-  text-decoration: none;
+}
+.button.light:active {
+  color: var(--blue);
+  background-color: var(--blue-a10);
 }
 
 /* hero */
@@ -383,14 +394,12 @@ Components */
   color: var(--white);
   font-weight: var(--font-weight-thin);
 }
-.hero h2 {
+.hero h3 {
   color: var(--white);
-  font-size: var(--font-size-h3);
 }
 .hero hr {
   width: 48px;
-  margin-bottom: var(--spacer);
-  border-top: 1px solid var(--white-a50);
+  border-top-color: var(--white-a50);
 }
 @media (min-width: 576px) {
   .hero {
@@ -428,9 +437,8 @@ Components */
   align-self: center;
   text-align: center;
 }
-.promo h3 {
+.promo h2 {
   color: var(--white);
-  font-size: var(--font-size-h2);
   font-weight: var(--font-weight-thin);
 }
 .promo h4 {
@@ -443,8 +451,7 @@ Components */
 }
 .promo hr {
   width: 48px;
-  margin-bottom: var(--spacer);
-  border-top: 1px solid var(--white-a50);
+  border-top-color: var(--white-a50);
 }
 .promo .content,
 .promo .content p {
@@ -499,10 +506,9 @@ Components */
 }
 .card hr {
   width: 48px;
-  margin-bottom: var(--spacer);
 }
 
-/* content-section */
+/* content-section (photo + short text) */
 
 .content-sections {
   margin-bottom: var(--spacer-xxl);
@@ -526,17 +532,16 @@ Components */
   height: auto;
   border-radius: var(--border-radius);
 }
-.content-section h3 {
-  font-size: var(--font-size-h2);
-}
-.content-section h4 {
-  margin-top: calc(var(--spacer-sm) * -1);/* negative margin */
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-bold);
-}
+.content-section h3,
+.content-section h4,
 .content-section h5 {
   margin-top: calc(var(--spacer-sm) * -1);/* negative margin */
   font-size: var(--font-size-base);
+}
+.content-section h3 {
+  font-weight: var(--font-weight-bold);
+}
+.content-section h4 {
   font-weight: var(--font-weight-normal);
 }
 
@@ -560,16 +565,13 @@ Components */
   align-self: center;
 }
 
-/* content-blurb */
+/* content-blurb (short centered text) */
 
 .content-blurbs {
   margin-bottom: var(--spacer-xxl);
 }
 .content-blurb {
   margin-bottom: var(--spacer-xxl);
-}
-.content-blurb h3 {
-  font-size: var(--font-size-h2);
 }
 @media (min-width: 576px) {
   .content-blurb {
@@ -601,11 +603,11 @@ Layout */
   padding-top: var(--spacer-sm);
   padding-bottom: var(--spacer-sm);
 }
-.main-header h1 {
+.main-header .home {
   width: 100px;
   margin: 0 auto var(--spacer) auto;
 }
-.main-header h1 img {
+.main-header .home img {
   display: block;
   width: 100%;
   height: auto;
@@ -615,7 +617,7 @@ Layout */
     display: flex;
     align-items: center;
   }
-  .main-header h1 {
+  .main-header .home {
     flex: 0 0 auto;
     margin: 0;
   }
@@ -855,7 +857,7 @@ body.js-nav.show-nav .main-nav {
   background-position: center center;
   text-align: center;
 }
-.page-header h2 {
+.page-header h1 {
   margin-bottom: 0;
   color: var(--white);
   font-weight: var(--font-weight-thin);
@@ -877,12 +879,6 @@ Pages */
 .party-in-the-park img {
   display: block;
   margin: 0 auto;
-}
-
-/* what-we-believe */
-
-.what-we-believe > .container {
-  max-width: 960px;
 }
 
 /* 404 */

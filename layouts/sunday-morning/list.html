@@ -5,17 +5,17 @@
       {{ range .Params.sections }}
         <div class="content-section">
           <div class="photo">
-            <img src="{{ .photo }}" alt="{{ safeHTMLAttr .title }}">
+            <img src="{{ .photo }}" alt="{{ safeHTMLAttr .headline }}">
           </div>
           <div class="body">
-            <h3>
-              {{ .title }}
-            </h3>
+            <h2>
+              {{ .headline }}
+            </h2>
             <div class="content">
               {{ .contentHTML | safeHTML }}
             </div>
             {{ if .button }}
-              <a href="{{ .button.href }}" class="text-button">{{ .button.text }}</a>
+              <a href="{{ .button.href }}" class="button light">{{ .button.text }}</a>
             {{ end }}
           </div>
         </div>
@@ -27,9 +27,9 @@
     <div class="content-blurbs">
         <div class="content-blurb location">
           <div class="body">
-            <h3>
-              {{ .Params.location.title }}
-            </h3>
+            <h2>
+              {{ .Params.location.headline }}
+            </h2>
             <div class="content">
               {{ .Params.location.contentHTML | safeHTML }}
             </div>
@@ -37,9 +37,9 @@
         </div>
         <div class="content-blurb center-content directions">
           <div class="body">
-            <h3>
-              {{ .Params.directions.title }}
-            </h3>
+            <h2>
+              {{ .Params.directions.headline }}
+            </h2>
             <div class="content">
               {{ .Params.directions.contentHTML | safeHTML }}
             </div>

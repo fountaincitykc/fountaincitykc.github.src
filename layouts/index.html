@@ -3,12 +3,12 @@
   <div class="hero" style="background-image:url('{{ .Params.hero.photo }}');">
       <div class="body">
         <h1>
-          {{ .Params.hero.headline }}
+          {{ .Params.hero.headline1 }}
         </h1>
         <hr>
-        <h2>
-          {{ .Params.hero.subhead }}
-        </h2>
+        <h3>
+          {{ .Params.hero.headline2 }}
+        </h3>
       </div>
   </div>
   <div class="container">
@@ -20,7 +20,7 @@
           </div>
           <div class="body">
             <h3>
-              {{ .title }}
+              {{ .headline }}
             </h3>
             <hr>
             <div class="content">
@@ -37,12 +37,12 @@
     </div>
     <div class="content-section vertical-center sermon">
       <div class="photo">
-        <img src="{{ .Params.sermon.photo }}" alt="{{ safeHTMLAttr .Params.sermon.title }}">
+        <img src="{{ .Params.sermon.photo }}" alt="{{ safeHTMLAttr .Params.sermon.headline }}">
       </div>
       <div class="body">
-        <h3>
-          {{ .Params.sermon.title }}
-        </h3>
+        <h2>
+          {{ .Params.sermon.headline }}
+        </h2>
         <div class="content">
           {{ .Params.sermon.contentHTML | safeHTML }}
         </div>
@@ -52,17 +52,17 @@
     {{ if eq .Params.event.active true }}
       <div class="promo event" style="background-image:url('{{ .Params.event.photo }}');">
         <div class="body">
-          <h3>
-            {{ .Params.event.headline }}
-          </h3>
-          {{ if .Params.event.subhead1 }}
+          <h2>
+            {{ .Params.event.headline1 }}
+          </h2>
+          {{ if .Params.event.headline2 }}
             <hr>
             <h4>
-              {{ .Params.event.subhead1 }}
+              {{ .Params.event.headline2 }}
             </h4>
-            {{ if .Params.event.subhead2 }}
+            {{ if .Params.event.headline3 }}
               <h5>
-                {{ .Params.event.subhead2 }}
+                {{ .Params.event.headline3 }}
               </h5>
             {{ end }}
           {{ end }}

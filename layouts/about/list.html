@@ -1,28 +1,25 @@
 {{ define "main" }}
 <div class="about">
-  <div class="container">
-    <div class="content-blurb mission">
-      <div class="body">
-        <h3>
-          {{ .Params.mission.title }}
-        </h3>
-        <div class="content">
-          {{ .Params.mission.contentHTML | safeHTML }}
-        </div>
-      </div>
+  <div class="container-lg mission">
+    <h2>
+      {{ .Params.mission.headline1 }}
+    </h2>
+    <h5 class="subhead">
+      {{ .Params.mission.headline2 }}
+    </h5>
+    <div class="content">
+      {{ .Params.mission.contentHTML | safeHTML }}
     </div>
   </div>
-  <div class="hero fixed" style="background-image:url('{{ .Params.hero.photo }}');"></div>
-  <div class="container">
-    <div class="content-blurb story">
-      <div class="body">
-        <h3>
-          {{ .Params.story.title }}
-        </h3>
-        <div class="content">
-          {{ .Params.story.contentHTML | safeHTML }}
-        </div>
-      </div>
+  <div class="container-lg vision">
+    <h2>
+      {{ .Params.vision.headline1 }}
+    </h2>
+    <h5 class="subhead">
+      {{ .Params.vision.headline2 }}
+    </h5>
+    <div class="content">
+      {{ .Params.vision.contentHTML | safeHTML }}
     </div>
   </div>
 </div>

@@ -3,7 +3,7 @@
   <div class="container">
     <div class="content-blurb overview">
       <div class="body">
-        <div class="content highlight-lead">
+        <div class="content callout-lead">
           {{ .Params.overview.contentHTML | safeHTML }}
         </div>
       </div>
@@ -13,12 +13,12 @@
   <div class="container">
     <div class="content-section vertical-center">
       <div class="photo">
-        <img src="{{ .Params.section.photo }}" alt="{{ safeHTMLAttr .Params.section.title }}">
+        <img src="{{ .Params.section.photo }}" alt="{{ safeHTMLAttr .Params.section.headline }}">
       </div>
       <div class="body">
-        <h3>
-          {{ .Params.section.title }}
-        </h3>
+        <h2>
+          {{ .Params.section.headline }}
+        </h2>
         <div class="content">
           {{ .Params.section.contentHTML | safeHTML }}
         </div>

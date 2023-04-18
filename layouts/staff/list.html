@@ -8,15 +8,15 @@
             <img src="{{ .photo }}" alt="{{ safeHTMLAttr .title }}">
           </div>
           <div class="body">
-            <h3>
+            <h2>
               {{ .name }}
+            </h2>
+            <h3>
+              {{ .role }}
             </h3>
             <h4>
-              {{ .role }}
-            </h4>
-            <h5>
               <a href="mailto:{{ .email }}">{{ .email }}</a>
-            </h5>
+            </h4>
             <div class="content">
               {{ .contentHTML | safeHTML }}
             </div>
