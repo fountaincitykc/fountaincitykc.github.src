@@ -1,0 +1,14 @@
+{{ define "main" }}
+<div class="faq">
+  <div class="container-sm">
+    {{ range .Params.faqs }}
+      <h2>
+        {{ .question }}
+      </h2>
+      <div class="content">
+        {{ .answerHTML | safeHTML }}
+      </div>
+    {{ end }}
+  </div>
+</div>
+{{ end }}
