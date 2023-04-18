@@ -29,7 +29,9 @@
               </p>
             </div>
             {{ if .button }}
-              <a href="{{ .button.href }}" class="button">{{ .button.text }}</a>
+              <a href="{{ .button.href }}" class="button">
+                {{ .button.text }}
+              </a>
             {{ end }}
           </div>
         </div>
@@ -46,7 +48,9 @@
         <div class="content">
           {{ .Params.sermon.contentHTML | safeHTML }}
         </div>
-        <a href="{{ .Params.sermon.button.href }}" class="button">{{ .Params.sermon.button.text }}</a>
+        <a href="{{ .Params.sermon.button.href }}" class="button">
+          {{ .Params.sermon.button.text }}
+        </a>
       </div>
     </div>
     {{ if eq .Params.event.active true }}

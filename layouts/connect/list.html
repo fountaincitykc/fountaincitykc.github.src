@@ -15,7 +15,9 @@
               {{ .contentHTML | safeHTML }}
             </div>
             {{ if .button }}
-              <a href="{{ .button.href }}" class="more text-button">{{ .button.text }}</a>
+              <a href="{{ .button.href }}" class="more text-button">
+                {{ .button.text }}
+              </a>
             {{ end }}
           </div>
         </div>
@@ -29,7 +31,9 @@
         <div class="content">
           {{ .Params.contact.contentHTML | safeHTML }}
         </div>
-        <a href="{{ .Params.contact.button.href }}" target="_blank" class="button">{{ .Params.contact.button.text }}</a>
+        <a href="{{ .Params.contact.button.href }}" target="_blank" class="button">
+          {{ .Params.contact.button.text }}
+        </a>
       </div>
     </div>
   </div>

@@ -15,7 +15,9 @@
               {{ .contentHTML | safeHTML }}
             </div>
             {{ if .button }}
-              <a href="{{ .button.href }}" class="button light">{{ .button.text }}</a>
+              <a href="{{ .button.href }}" class="button light">
+                {{ .button.text }}
+              </a>
             {{ end }}
           </div>
         </div>
@@ -43,7 +45,9 @@
             <div class="content">
               {{ .Params.directions.contentHTML | safeHTML }}
             </div>
-              <a href="{{ .Params.directions.button.href }}" class="button">{{ .Params.directions.button.text }}</a>
+              <a href="{{ .Params.directions.button.href }}" class="button">
+                {{ .Params.directions.button.text }}
+              </a>
           </div>
         </div>
     </div>

@@ -15,7 +15,9 @@
               {{ .role }}
             </h3>
             <h4>
-              <a href="mailto:{{ .email }}">{{ .email }}</a>
+              <a href="mailto:{{ .email }}">
+                {{ .email }}
+              </a>
             </h4>
             <div class="content">
               {{ .contentHTML | safeHTML }}
