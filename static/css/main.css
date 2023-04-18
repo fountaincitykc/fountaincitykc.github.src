@@ -758,7 +758,7 @@ body.js-nav.show-nav .main-nav {
   }
   body.js-nav .main-nav a {
     display: block;
-    padding: var(--spacer) var(--spacer-lg) var(--spacer) var(--spacer-lg);
+    padding: var(--spacer-sm) var(--spacer-lg) var(--spacer-sm) var(--spacer-lg);
     color: var(--white);
     font-size: var(--font-size-large);
     font-weight: var(--font-weight-bold);

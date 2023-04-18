@@ -1,0 +1,9 @@
+{{ define "main" }}
+<div class="story">
+  <div class="container-md">
+    <div class="content">
+      {{ .Params.overview.contentHTML | safeHTML }}
+    </div>
+  </div>
+</div>
+{{ end }}

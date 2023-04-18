@@ -1,23 +1,17 @@
 {{ define "main" }}
 <div class="about">
   <div class="container-lg mission">
-    <h2>
-      {{ .Params.mission.headline1 }}
-    </h2>
-    <h5 class="subhead">
-      {{ .Params.mission.headline2 }}
-    </h5>
+    <h3>
+      {{ .Params.mission.headline }}
+    </h3>
     <div class="content">
       {{ .Params.mission.contentHTML | safeHTML }}
     </div>
   </div>
   <div class="container-lg vision">
-    <h2>
-      {{ .Params.vision.headline1 }}
-    </h2>
-    <h5 class="subhead">
-      {{ .Params.vision.headline2 }}
-    </h5>
+    <h3>
+      {{ .Params.vision.headline }}
+    </h3>
     <div class="content">
       {{ .Params.vision.contentHTML | safeHTML }}
     </div>
