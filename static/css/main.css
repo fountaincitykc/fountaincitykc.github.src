@@ -575,9 +575,6 @@ Components */
 }
 @media (min-width: 576px) {
   .content-blurb {
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
     text-align: center;
   }
   .content-blurb .content {
