@@ -11,35 +11,42 @@
     <header id="main-header" class="main-header">
       <div class="container">
         <div class="row">
-          <div class="home">
+          <div class="logo">
             <a href="/">
               <img src="/images/fountain-city-church.png" alt="Fountain City Church">
             </a>
           </div>
           <nav id="main-nav" class="main-nav">
             <ul>
-              <li>
-                <a href="/about/"{{ if eq .Type "about" }} class="selected"{{ end }}>
+              <li{{ if eq .Type "about" }} class="selected"{{ end }}>
+                <a href="/about/">
                   About us
                 </a>
+                <ul>
+                  <li{{ if eq .Type "staff" }} class="selected"{{ end }}>
+                    <a href="/staff/">
+                      Our staff
+                    </a>
+                  </li>
+                  <li{{ if eq .Type "what-we-believe" }} class="selected"{{ end }}>
+                    <a href="/what-we-believe/">
+                      What we believe
+                    </a>
+                  </li>
+                  <li{{ if eq .Type "faq" }} class="selected"{{ end }}>
+                    <a href="/faq/">
+                     FAQ
+                    </a>
+                  </li>
+                </ul>
               </li>
-              <li>
-                <a href="/staff/"{{ if eq .Type "staff" }} class="selected"{{ end }}>
-                  Our staff
-                </a>
-              </li>
-              <li>
-                <a href="/what-we-believe/"{{ if eq .Type "what-we-believe" }} class="selected"{{ end }}>
-                  What we believe
-                </a>
-              </li>
-              <li>
-                <a href="/sunday-morning/"{{ if eq .Type "sunday-morning" }} class="selected"{{ end }}>
+              <li{{ if eq .Type "sunday-morning" }} class="selected"{{ end }}>
+                <a href="/sunday-morning/">
                   Sunday morning
                 </a>
               </li>
-              <li>
-                <a href="/connect/"{{ if eq .Type "connect" }} class="selected"{{ end }}>
+              <li{{ if eq .Type "connect" }} class="selected"{{ end }}>
+                <a href="/connect/">
                   Connect
                 </a>
               </li>
