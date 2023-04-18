@@ -6,13 +6,13 @@ hero:
 
 sections:
 - title: What to expect
-  contentHTML: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
+  contentHTML: "<p>Fountain City is a church that values community and connection which you will notice right away. No matter your age or background, you will find a place here. The service usually lasts about an hour and fifteen minutes. Attire varies - generally casual. You are more than welcome to stick around after service and get to know people, or head out and enjoy the park.</p>"
   photo: http://via.placeholder.com/600x500
 - title: Worship
-  contentHTML: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
+  contentHTML: "<p>Worship at Fountain City helps everyone present encounter and honor God. Through a blend of modern music, contemporary hymns, prayers and Scripture reading, all are invited to participate in the service. Sermons are preached from a passage in the Bible and are followed by communion.</p>"
   photo: http://via.placeholder.com/600x500
 - title: Families
-  contentHTML: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
+  contentHTML: "<p>Fountain City is filled with young families. As we seek to help each child grow in his or her knowledge and love of God, families are invited to worship together for portions of the service.  Nursery is available for children ages 0-3, and a worship class for kids ages 3-6 during the sermon. Kids 7 and up join their parents and receive age-appropriate materials to engage them during the sermon.</p>"
   button:
     text: Learn more
     href: /families/
@@ -20,7 +20,7 @@ sections:
 
 location:
   title: Were we meet
-  contentHTML: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
+  contentHTML: "<p>Meadowbrook Park Clubhouse has been our gathering location since the fall of 2020. The clubhouse provides a beautiful space for our growing church - and opportunity to enjoy the playground or grab lunch in a pavilion after service. The clubhouse sits on the northwest corner of Meadowbrook Park.</p>"
 
 directions:
   title: Directions
