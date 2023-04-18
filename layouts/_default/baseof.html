@@ -67,16 +67,13 @@
         <div class="row">
           <div class="social">
             <ul>
-              <li>
-                <a href="{{ .Site.Data.footer.youtube }}" class="youtube">
-                  <img src="/images/youtube.svg" alt="Youtube">
-                </a>
-              </li>
-              <li>
-                <a href="{{ .Site.Data.footer.instagram }}" class="instagram">
-                  <img src="/images/instagram.svg" alt="Instagram">
-                </a>
-              </li>
+              {{ range .Site.Data.footer.social }}
+                <li>
+                  <a href="{{ .url }}">
+                    <img src="{{ .image }}" alt="{{ safeHTMLAttr .title }}" target="_blank">
+                  </a>
+                </li>
+              {{ end }}
             </ul>
           </div>
           <div class="copyright">
