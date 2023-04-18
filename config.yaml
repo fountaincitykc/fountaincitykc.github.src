@@ -3,7 +3,7 @@ baseURL: "https://www.fountaincitykc.org/"
 title: "Fountain City Church"
 publishDir: "../fountaincitykc.github.io"
 paginate: 10
-disableKinds: ["RSS","taxonomyTerm"]
+disableKinds: ["RSS","taxonomy","term"]
 params:
   datetimeFormat: "Jan 2, 2006 @ 3:04pm"
 ...
