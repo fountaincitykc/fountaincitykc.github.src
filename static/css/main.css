@@ -372,6 +372,18 @@ Components */
   color: var(--blue);
   background-color: var(--blue-a10);
 }
+.button.white {
+  color: var(--blue);
+  background-color: var(--white);
+}
+.button.white:hover {
+  color: var(--blue);
+  background-color: var(--blue-a10);
+}
+.button.white:active {
+  color: var(--blue);
+  background-color: var(--white);
+}
 
 /* hero */
 
@@ -899,7 +911,7 @@ body.js-nav.show-nav .main-nav {
 .page-header {
   margin-bottom: var(--spacer-xxl);
   padding: var(--spacer-xxl) var(--spacer);
-  background-image: url(/images/header1.jpg);
+  background-image: url(/images/header.jpg);/* fallback */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -912,24 +924,7 @@ body.js-nav.show-nav .main-nav {
 }
 
 /* -----------------------------------------------------------------------------
-Pages */
-
-/* home */
-
-.party-in-the-park {
-  background-image: url(/images/party-in-the-park-bkgd.png);
-  background-size: 340px 340px;
-  background-repeat: repeat-x;
-  background-position: top left;
-  background-color: #42969C;
-  padding-bottom: 0;
-}
-.party-in-the-park img {
-  display: block;
-  margin: 0 auto;
-}
-
-/* 404 */
+404 */
 
 .error {
   padding-top: var(--spacer-xxl);

@@ -29,7 +29,7 @@
               </p>
             </div>
             {{ if .button }}
-              <a href="{{ .button.href }}" class="button">
+              <a href="{{ .button.href }}" class="button white">
                 {{ .button.text }}
               </a>
             {{ end }}
@@ -77,8 +77,8 @@
           </div>
         </div>
       </div>
-    {{ else }}
-      {{ partial "custom-event.html" . }}
+    {{ else if .Params.eventHTML }}
+      {{ partial .Params.eventHTML . }}
     {{ end }}
   </div>
 </div>
