@@ -718,14 +718,15 @@ body.js-nav.show-nav .main-nav {
   display: block;
 }
 
-.nav-toggle {
+.js-nav-toggle,
+.js-nav-close {
     display: block;
-    text-align: right;
+    padding: var(--spacer-sm) 0;
 }
-.nav-toggle a {
+.js-nav-toggle span,
+.js-nav-close span {
   display: inline-block;
-  padding-left: 48px;
-  background-image: url(/images/menu.svg);
+  padding-left: 40px;
   background-repeat: no-repeat;
   background-position: left center;
   background-size: 36px 36px;
@@ -733,6 +734,15 @@ body.js-nav.show-nav .main-nav {
   text-decoration: none;
   font-size: var(--font-size-large);
   font-weight: var(--font-weight-bold);
+  cursor: pointer;
+}
+.js-nav-toggle span {
+  color: var(--blue);
+  background-image: url(/images/nav-toggle.svg);
+}
+.js-nav-close span {
+  color: var(--white);
+  background-image: url(/images/nav-close.svg);
 }
 
 @media (max-width: 767px) {/* JavaScript-enabled mobile navigation */
@@ -744,8 +754,9 @@ body.js-nav.show-nav .main-nav {
     flex: 0 0 auto;
     margin: 0;
   }
-  body.js-nav .main-header .nav-toggle {
+  body.js-nav .main-header .js-nav-toggle {
     flex: 1 1 auto;
+    text-align: right;
   }
   body.js-nav .main-nav {
     position: fixed;
@@ -756,9 +767,13 @@ body.js-nav.show-nav .main-nav {
     overflow: auto;
     background-color: var(--blue);
   }
+  body.js-nav .main-header .js-nav-close {
+    text-align: right;
+    padding-right: var(--spacer);
+  }
   body.js-nav .main-nav a {
     display: block;
-    padding: var(--spacer-sm) var(--spacer-lg) var(--spacer-sm) var(--spacer-lg);
+    padding: var(--spacer-sm) var(--spacer-lg);
     color: var(--white);
     font-size: var(--font-size-large);
     font-weight: var(--font-weight-bold);
@@ -772,9 +787,6 @@ body.js-nav.show-nav .main-nav {
     background-color: var(--white-a20);
     cursor: default;
   }
-  body.js-nav .main-nav .close {
-    text-align: right;
-  }
   body.js-nav .main-nav li li {/* submenu */
     padding-left: var(--spacer-lg);
   }
@@ -785,16 +797,16 @@ body.js-nav.show-nav .main-nav {
 @media (min-width: 768px) {
   body.js-nav.show-nav {
     /* always show scrollbar above this breakpoint */
-    overflow: auto;
+    overflow: auto !important;
   }
   body.js-nav .main-nav {
     /* always show main-nav above this breakpoint */
-    display: block;
+    display: block !important;
   }
-  .nav-toggle,
-  .main-nav .close {
-    /* hide nav toggle and close button above this breakpoint */
-    display: none;
+  body.js-nav .js-nav-toggle,
+  body.js-nav .js-nav-close {
+    /* hide nav toggle and nav close above this breakpoint */
+    display: none !important;
   }
 }
 
