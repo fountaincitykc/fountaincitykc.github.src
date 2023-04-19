@@ -7,10 +7,10 @@ addressHTML: "<address>Meadowbrook Park Clubhouse<br>9101 Nall Ave<br>Prairie Vi
 social:
 - text: Youtube
   url: https://www.youtube.com/@fountaincitychurchkc9519/
-  image: /images/youtube.svg
+  image: /images/ui/youtube.svg
 - text: Instagram
   url: https://www.instagram.com/fountaincitychurch_kc/
-  image: /images/instagram.svg
+  image: /images/ui/instagram.svg
 - text: Facebook
   url: https://www.facebook.com/people/Fountain-City-Church/100070786269545/
-  image: /images/facebook.svg
+  image: /images/ui/facebook.svg
