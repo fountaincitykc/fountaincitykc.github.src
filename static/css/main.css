@@ -261,9 +261,9 @@ Utilities */
 
 .callout,
 .callout-lead > p:first-of-type {
-  padding: var(--spacer);
+  /* padding: var(--spacer);
   background-color: var(--blue-a10);
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius); */
   font-size: var(--font-size-large);
 }
 
@@ -877,7 +877,6 @@ body.js-nav.show-nav .main-nav {
     padding-bottom: 0;
     padding-right: var(--spacer-lg);
     border-bottom: none;
-    border-right: solid 1px var(--white-a20);
   }
   .main-footer .contact > * {
     max-width: 600px;
@@ -918,18 +917,24 @@ body.js-nav.show-nav .main-nav {
 /* page-header */
 
 .page-header {
-  margin-bottom: var(--spacer-xxl);
+  /* margin-bottom: var(--spacer-xxl); */
   padding: var(--spacer-xxl) var(--spacer);
-  background-image: url(/images/ui/header1.jpg);/* fallback */
+  border-top: solid 1px var(--black-a20);
+  background-image: none !important;
+  /*background-image: url(/images/ui/header1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
+  background-position: center center;*/
   text-align: center;
 }
 .page-header h1 {
-  margin-bottom: 0;
-  color: var(--white);
+  /* margin-bottom: 0; */
+  color: var(--blue);
   font-weight: var(--font-weight-thin);
+}
+.page-header hr {
+  width: 48px;
+  border-top: solid 4px var(--blue);
 }
 
 /* -----------------------------------------------------------------------------
