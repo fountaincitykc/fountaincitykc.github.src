@@ -912,7 +912,6 @@ body.js-nav.show-nav .main-nav {
 .page-header {
   padding: var(--spacer-xxl) var(--spacer);
   border-top: solid 1px var(--black-a20);
-  background-image: none !important;
   text-align: center;
 }
 .page-header h1 {
