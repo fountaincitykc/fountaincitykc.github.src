@@ -918,8 +918,10 @@ body.js-nav.show-nav .main-nav {
 /* page-header */
 
 .page-header {
+  margin-bottom: var(--spacer-xxl);
   padding: var(--spacer-xxl) var(--spacer);
-  border-top: solid 1px var(--black-a20);
+  border-top: solid 3px var(--blue-a10);
+  background-color: var(--blue-a10);
   text-align: center;
 }
 .page-header h1 {
@@ -930,6 +932,7 @@ body.js-nav.show-nav .main-nav {
   letter-spacing: 1px;
 }
 .page-header hr {
+  margin-bottom: 0;
   border-top-color: var(--blue);
 }
 
