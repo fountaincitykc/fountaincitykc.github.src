@@ -241,11 +241,12 @@ strong, b {
 
 hr {
   box-sizing: content-box;
+  width: 48px;
   height: 0;
   margin-bottom: var(--spacer);
   overflow: visible;
   border: none;
-  border-top: 1px solid var(--black-a30);
+  border-top: 3px solid var(--black-a30);
 }
 
 /* -----------------------------------------------------------------------------
@@ -418,7 +419,6 @@ Components */
   color: var(--white);
 }
 .hero hr {
-  width: 48px;
   border-top-color: var(--white-a50);
 }
 @media (min-width: 576px) {
@@ -448,10 +448,7 @@ Components */
   align-items: stretch;
   margin-bottom: var(--spacer-xxl);
   padding: var(--spacer-xxl) var(--spacer);
-  background-image: url(/images/ui/promo.jpg);/* fallback */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+  background-color: var(--blue);
   border-radius: var(--border-radius);
 }
 .promo .body {
@@ -471,7 +468,6 @@ Components */
   color: var(--white);
 }
 .promo hr {
-  width: 48px;
   border-top-color: var(--white-a50);
 }
 .promo .content,
@@ -524,9 +520,6 @@ Components */
 }
 .card .button {
   margin-bottom: var(--spacer);
-}
-.card hr {
-  width: 48px;
 }
 
 /* content-section (photo + short text) */
@@ -855,7 +848,7 @@ body.js-nav.show-nav .main-nav {
 .main-footer .contact {
   margin-bottom: var(--spacer-xl);
   padding-bottom: var(--spacer-xl);
-  border-bottom: solid 1px var(--white-a20);
+  border-bottom: solid 3px var(--white-a20);
 }
 .main-footer .social ul {
   display: flex;
@@ -892,7 +885,7 @@ body.js-nav.show-nav .main-nav {
   .main-footer .copyright {
     flex: 1 0 auto;
     padding-top: var(--spacer);
-    border-top: solid 1px var(--white-a20);
+    border-top: solid 3px var(--white-a20);
   }
   .main-footer .social {
     order: 2;
@@ -917,24 +910,16 @@ body.js-nav.show-nav .main-nav {
 /* page-header */
 
 .page-header {
-  /* margin-bottom: var(--spacer-xxl); */
   padding: var(--spacer-xxl) var(--spacer);
   border-top: solid 1px var(--black-a20);
   background-image: none !important;
-  /*background-image: url(/images/ui/header1.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;*/
   text-align: center;
 }
 .page-header h1 {
-  /* margin-bottom: 0; */
   color: var(--blue);
-  font-weight: var(--font-weight-thin);
 }
 .page-header hr {
-  width: 48px;
-  border-top: solid 4px var(--blue);
+  border-top-color: var(--blue);
 }
 
 /* -----------------------------------------------------------------------------
