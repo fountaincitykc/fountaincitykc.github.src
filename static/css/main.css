@@ -53,6 +53,7 @@ Variables */
   --font-weight-bold: 500;
   --line-height-base: 1.5;
   --line-height-header: 1.2;
+  --uppercase-letter-spacing: 1px;
 
   --border-radius: 3px;
 
@@ -159,6 +160,8 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: var(--spacer);
   font-family: var(--font-family-base);
   line-height: var(--line-height-header);
+  text-transform: uppercase;
+  letter-spacing: var(--uppercase-letter-spacing);
 }
 
 h1 {
@@ -413,10 +416,11 @@ Components */
 }
 .hero h1 {
   color: var(--white);
-  font-weight: var(--font-weight-thin);
+  font-weight: var(--font-weight-bold);
 }
 .hero h3 {
   color: var(--white);
+  font-weight: var(--font-weight-thin);
 }
 .hero hr {
   border-top-color: var(--white-a50);
@@ -850,6 +854,10 @@ body.js-nav.show-nav .main-nav {
   padding-bottom: var(--spacer-xl);
   border-bottom: solid 3px var(--white-a20);
 }
+.main-footer .contact h3 {
+  text-transform: none;
+  letter-spacing: 0;
+}
 .main-footer .social ul {
   display: flex;
   padding: 0;
@@ -916,13 +924,28 @@ body.js-nav.show-nav .main-nav {
 }
 .page-header h1 {
   color: var(--blue);
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 .page-header hr {
   border-top-color: var(--blue);
 }
 
 /* -----------------------------------------------------------------------------
-404 */
+Pages */
+
+.main-content .about h3 {
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.main-content .staff h3,
+.main-content .staff h4 {
+  text-transform: none;
+  letter-spacing: 0;
+}
 
 .error {
   padding-top: var(--spacer-xxl);
