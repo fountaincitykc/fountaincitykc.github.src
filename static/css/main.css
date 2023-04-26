@@ -1000,34 +1000,6 @@ Animation */
   translate: 0;
 }
 
-/* sunday-morning / hero */
-
-.sunday-morning .hero.animate {
-  background-size: 110%;
-}
-@media (prefers-reduced-motion: no-preference) {
-  .sunday-morning .hero.js-start-animation {
-    transition: background-size 1s var(--easeOutQuad);
-  }
-}
-.sunday-morning .hero.js-start-animation {
-  background-size: 100%;
-}
-
-/* families / hero */
-
-.families .hero.animate {
-  background-size: 110%;
-}
-@media (prefers-reduced-motion: no-preference) {
-  .families .hero.js-start-animation {
-    transition: background-size 1s var(--easeOutQuad);
-  }
-}
-.families .hero.js-start-animation {
-  background-size: 100%;
-}
-
 /* connect / contact */
 
 .connect .contact.animate {
