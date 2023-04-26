@@ -143,6 +143,11 @@ html {
   box-sizing: inherit;
 }
 
+::selection {
+  color: var(--white);
+  background-color: var(--blue-light);
+}
+
 body {
   margin: 0;
   background-color: var(--white);
