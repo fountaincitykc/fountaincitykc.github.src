@@ -3,7 +3,7 @@
   <div class="container">
     <div class="content-sections">
       {{ range .Params.sections }}
-        <div class="content-section">
+        <div class="content-section animate">
           <div class="photo">
             <img src="{{ .photo }}" alt="{{ safeHTMLAttr .headline }}">
           </div>
@@ -24,10 +24,10 @@
       {{ end }}
     </div>
   </div>
-  <div class="hero fixed" style="background-image:url('{{ .Params.hero.photo }}');"></div>
+  <div class="hero fixed animate" style="background-image:url('{{ .Params.hero.photo }}');"></div>
   <div class="container-md">
     <div class="content-blurbs">
-        <div class="content-blurb location">
+        <div class="content-blurb location animate">
           <div class="body">
             <h2>
               {{ .Params.location.headline }}
@@ -37,7 +37,7 @@
             </div>
           </div>
         </div>
-        <div class="content-blurb center-content directions">
+        <div class="content-blurb center-content directions animate">
           <div class="body">
             <h2>
               {{ .Params.directions.headline }}

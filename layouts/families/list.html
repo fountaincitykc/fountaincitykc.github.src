@@ -1,7 +1,7 @@
 {{ define "main" }}
 <div class="families">
   <div class="container-md">
-    <div class="content-blurb overview">
+    <div class="content-blurb overview animate">
       <div class="body">
         <div class="content callout-lead">
           {{ .Params.overview.contentHTML | safeHTML }}
@@ -9,9 +9,9 @@
       </div>
     </div>
   </div>
-  <div class="hero fixed" style="background-image:url('{{ .Params.hero.photo }}');"></div>
+  <div class="hero fixed animate" style="background-image:url('{{ .Params.hero.photo }}');"></div>
   <div class="container">
-    <div class="content-section vertical-center">
+    <div class="content-section vertical-center animate">
       <div class="photo">
         <img src="{{ .Params.section.photo }}" alt="{{ safeHTMLAttr .Params.section.headline }}">
       </div>

@@ -5,7 +5,7 @@
     <title>{{ with .Title }}{{ . }} / {{ end }}{{ .Site.Title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-    <link href="/css/main.css?v20230424" rel="stylesheet" type="text/css">
+    <link href="/css/main.css?v20230425" rel="stylesheet" type="text/css">
   </head>
   <body>
     <header id="main-header" class="main-header">
@@ -67,7 +67,7 @@
     </header>
     <main class="main-content">
       {{ if .Title }}
-        <div class="page-header">
+        <div class="page-header animate">
           <h1>
             {{ .Title }}
           </h1>
@@ -116,6 +116,6 @@
       </div>
     </footer>
     <!-- <div class="debug"></div> -->
-    <script src="/js/main.js?v20230424"></script>
+    <script src="/js/main.js?v20230425"></script>
   </body>
 </html>

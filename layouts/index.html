@@ -1,6 +1,6 @@
 {{ define "main" }}
 <div class="home">
-  <div class="hero" style="background-image:url('{{ .Params.hero.photo }}');">
+  <div class="hero animate" style="background-image:url('{{ .Params.hero.photo }}');">
       <div class="body">
         <h1>
           {{ .Params.hero.headline1 }}
@@ -14,7 +14,7 @@
   <div class="container">
     <div class="cards">
       {{ range .Params.cards }}
-        <div class="card">
+        <div class="card animate">
           <div class="photo">
             <img src="{{ .photo }}" alt="{{ safeHTMLAttr .title }}">
           </div>
@@ -37,7 +37,7 @@
         </div>
       {{ end }}
     </div>
-    <div class="content-section vertical-center sermon">
+    <div class="content-section vertical-center sermon animate">
       <div class="photo">
         <img src="{{ .Params.sermon.photo }}" alt="{{ safeHTMLAttr .Params.sermon.headline }}">
       </div>
@@ -54,7 +54,7 @@
       </div>
     </div>
     {{ if eq .Params.event.active true }}
-      <div class="promo event"{{ if .Params.event.photo }}style="background-image:url('{{ .Params.event.photo }}');"{{ end }}>
+      <div class="promo event animate"{{ if .Params.event.photo }}style="background-image:url('{{ .Params.event.photo }}');"{{ end }}>
         <div class="body">
           <h2>
             {{ .Params.event.headline1 }}

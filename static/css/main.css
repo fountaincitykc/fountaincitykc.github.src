@@ -65,6 +65,12 @@ Variables */
   --spacer-xl: 64px;
   --spacer-xxl: 80px;
 
+  --zindex-main-nav: 998;
+  --zindex-main-nav-submenu: 999;
+
+  /* https://easings.net/ */
+  --easeOutQuad: cubic-bezier(0.5, 1, 0.89, 1);
+
 }
 @media (min-width: 576px) {
   :root {
@@ -647,6 +653,9 @@ Layout */
 
 /* main-nav */
 
+.main-nav {
+  z-index: var(--zindex-main-nav);
+}
 .main-nav ul {
   display: flex;
   flex-direction: column;
@@ -702,7 +711,7 @@ Layout */
     background-color: var(--white);
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     border-radius: var(--border-radius);
-    z-index: 999;
+    z-index: var(--zindex-main-nav-submenu);
   }
   .main-nav li:hover ul {
     display: block;
@@ -726,15 +735,16 @@ Layout */
 
 body.js-nav .main-nav {
   /* hides .main-nav by default */
-  display: none;
+  translate: -100vw 0 0;
+}
+body.js-nav.show-nav .main-nav {
+  /* .show-nav toggled by JavaScript */
+  transition: translate 0.5s var(--easeOutQuad);
+  translate: 0;
 }
 body.js-nav.show-nav {
   /* hide scrollbar when nav is showing */
   overflow: hidden;
-}
-body.js-nav.show-nav .main-nav {
-  /* .show-nav toggled by JavaScript */
-  display: block;
 }
 
 .js-nav-toggle,
@@ -821,6 +831,7 @@ body.js-nav.show-nav .main-nav {
   body.js-nav .main-nav {
     /* always show main-nav above this breakpoint */
     display: block !important;
+    translate: 0 !important;
   }
   body.js-nav .js-nav-toggle,
   body.js-nav .js-nav-close {
@@ -958,6 +969,77 @@ Pages */
 .error p {
   font-size: var(--font-size-large);
   text-align: center;
+}
+
+/* -----------------------------------------------------------------------------
+Animation */
+
+.animate {
+  opacity: 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .js-start-animation {
+    transition: opacity 1s ease;
+  }
+}
+.js-start-animation {
+  opacity: 1;
+}
+
+/* home / hero */
+
+.home .hero.animate .body {
+  translate: 0 40px 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .home .hero.js-start-animation .body {
+    transition: translate 1s var(--easeOutQuad);
+  }
+}
+.home .hero.js-start-animation .body {
+  translate: 0;
+}
+
+/* sunday-morning / hero */
+
+.sunday-morning .hero.animate {
+  background-size: 110%;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .sunday-morning .hero.js-start-animation {
+    transition: background-size 1s var(--easeOutQuad);
+  }
+}
+.sunday-morning .hero.js-start-animation {
+  background-size: 100%;
+}
+
+/* families / hero */
+
+.families .hero.animate {
+  background-size: 110%;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .families .hero.js-start-animation {
+    transition: background-size 1s var(--easeOutQuad);
+  }
+}
+.families .hero.js-start-animation {
+  background-size: 100%;
+}
+
+/* connect / contact */
+
+.connect .contact.animate {
+  translate: 0 80px 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .connect .contact.js-start-animation {
+    transition: translate 1s var(--easeOutQuad);
+  }
+}
+.connect .contact.js-start-animation {
+  translate: 0;
 }
 
 /* -----------------------------------------------------------------------------
