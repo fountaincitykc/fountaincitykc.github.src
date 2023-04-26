@@ -51,6 +51,7 @@ if (animationTargets) {
       e.forEach(e => {
         if (e.isIntersecting) {
           e.target.classList.add('js-start-animation');
+          observer.unobserve(e.target);
         }
       });
     });
