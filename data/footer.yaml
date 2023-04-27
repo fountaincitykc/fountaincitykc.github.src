@@ -5,13 +5,16 @@ contact:
     text: Contact us
     href: https://fountaincitykc.churchcenter.com/people/forms/283554
 addressHTML: "<address>Meadowbrook Park Clubhouse<br>9101 Nall Ave<br>Prairie Village, KS 66207</address>"
-social:
-- text: Youtube
-  url: https://www.youtube.com/@fountaincitychurchkc9519/
-  image: /images/ui/youtube.svg
+elsewhere:
 - text: Instagram
   url: https://www.instagram.com/fountaincitychurch_kc/
   image: /images/ui/instagram.svg
 - text: Facebook
   url: https://www.facebook.com/people/Fountain-City-Church/100070786269545/
   image: /images/ui/facebook.svg
+- text: Youtube
+  url: https://www.youtube.com/@fountaincitychurchkc9519/
+  image: /images/ui/youtube.svg
+- text: Apple Podcasts
+  url: https://podcasts.apple.com/us/podcast/fountain-city-kc/id1528910234
+  image: /images/ui/apple-podcasts.svg
