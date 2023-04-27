@@ -576,6 +576,10 @@ Components */
 .content-section h4 {
   font-weight: var(--font-weight-normal);
 }
+.content-section .actions  {
+  display: flex;
+  gap: var(--spacer-sm);
+}
 
 @media (min-width: 768px) {
   .content-section  {
