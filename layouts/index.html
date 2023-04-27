@@ -49,10 +49,10 @@
           {{ .Params.sermon.contentHTML | safeHTML }}
         </div>
         <div class="actions">
-          <a href="{{ .Params.sermon.watch.href }}" class="button">
+          <a href="{{ .Params.sermon.watch.href }}" class="button" target="_blank">
             {{ .Params.sermon.watch.text }}
           </a>
-          <a href="{{ .Params.sermon.listen.href }}" class="button">
+          <a href="{{ .Params.sermon.listen.href }}" class="button" target="_blank">
             {{ .Params.sermon.listen.text }}
           </a>
         </div>
