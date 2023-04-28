@@ -43,8 +43,13 @@
       </div>
       <div class="body">
         <h2>
-          {{ .Params.sermon.headline }}
+          {{ .Params.sermon.headline1 }}
         </h2>
+        {{ if .Params.sermon.headline2 }}
+          <h3>
+            {{ .Params.sermon.headline2 }}
+          </h3>
+        {{ end }}
         <div class="content">
           {{ .Params.sermon.contentHTML | safeHTML }}
         </div>
