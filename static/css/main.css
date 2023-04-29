@@ -524,6 +524,9 @@ Components */
   .cards {
     flex-direction: row;
   }
+  .cards > .card {
+    width: 33.33%;
+  }
 }
 
 .card {
