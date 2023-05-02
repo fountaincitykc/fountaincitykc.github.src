@@ -5,7 +5,7 @@
     <title>{{ with .Title }}{{ . }} / {{ end }}{{ .Site.Title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-    <link href="/css/main.css?v20230427" rel="stylesheet" type="text/css">
+    <link href="/css/main.css?v20230501" rel="stylesheet" type="text/css">
   </head>
   <body>
     <header id="main-header" class="main-header">
@@ -19,20 +19,20 @@
           <nav id="main-nav" class="main-nav">
             <ul>
               <li>
-                <a href="/about/">
+                <a href="/about-us/">
                   About us
                 </a>
                 <ul>
-                  <li{{ if eq .Type "about" }} class="selected"{{ end }}>
-                    <a href="/about/">
+                  <li{{ if eq .Type "about-us" }} class="selected"{{ end }}>
+                    <a href="/about-us/">
                       Mission &amp; vision
                     </a>
                   </li>
-                  <li{{ if eq .Type "story" }} class="selected"{{ end }}>
+                  <!-- <li{{ if eq .Type "story" }} class="selected"{{ end }}>
                     <a href="/story/">
                       Our story
                     </a>
-                  </li>
+                  </li> -->
                   <li{{ if eq .Type "staff" }} class="selected"{{ end }}>
                     <a href="/staff/">
                       Our staff
@@ -116,6 +116,6 @@
       </div>
     </footer>
     <!-- <div class="debug"></div> -->
-    <script src="/js/main.js?v20230427"></script>
+    <script src="/js/main.js?v20230501"></script>
   </body>
 </html>

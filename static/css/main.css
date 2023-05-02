@@ -135,6 +135,7 @@ html {
   font-size: var(--font-size-root);
   line-height: var(--line-height-base);
   -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -496,16 +497,6 @@ Components */
 .promo .content p {
   color: var(--white);
 }
-@media (min-width: 576px) {
-  .promo {
-    /* min-height: 300px; */
-  }
-}
-@media (min-width: 768px) {
-  .promo {
-    /* min-height: 400px; */
-  }
-}
 
 /* cards */
 
@@ -518,11 +509,14 @@ Components */
   margin-bottom: var(--spacer-xxl);
 }
 .cards > .card {
-  flex: 1 1 0;
+  flex-grow: 1;
 }
 @media (min-width: 992px) {
   .cards {
     flex-direction: row;
+  }
+  .cards > .card {
+    flex: 1 1 0;
   }
 }
 
@@ -974,7 +968,7 @@ body.js-nav.show-nav {
 /* -----------------------------------------------------------------------------
 Pages */
 
-.main-content .about h3 {
+.main-content .about-us h3 {
   text-transform: none;
   letter-spacing: 0;
 }

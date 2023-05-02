@@ -1,6 +1,6 @@
 {{ define "main" }}
-<div class="about">
-  <div class="container-lg mission animate">
+<div class="about-us">
+  <div class="container-lg mission animate" id="jumpto-mission">
     <h3>
       {{ .Params.mission.headline }}
     </h3>
@@ -8,7 +8,7 @@
       {{ .Params.mission.contentHTML | safeHTML }}
     </div>
   </div>
-  <div class="container-lg vision animate">
+  <div class="container-lg vision animate" id="jumpto-vision">
     <h3>
       {{ .Params.vision.headline }}
     </h3>
