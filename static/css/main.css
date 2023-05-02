@@ -534,6 +534,11 @@ Components */
   padding: var(--spacer);
   text-align: center;
 }
+.card h3 {
+  /* remove horizontal padding on headline to reduce wrapping */
+  margin-left: calc(var(--spacer) * -1);/* negative margin */
+  margin-right: calc(var(--spacer) * -1);/* negative margin */
+}
 .card .button {
   margin-bottom: var(--spacer);
 }
