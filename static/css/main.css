@@ -677,6 +677,12 @@ Layout */
 
 .main-nav {
   z-index: var(--zindex-main-nav);
+  /*
+  Hide the nav by default for mobile navigation to prevent the flash of the 
+  nav while page is loading. It would be nice if adding the "js-nav" 
+  class to the body would hide it quick enough, but unfortunately it doesn't.
+  */
+  transform: translate(-100vw, 0);
 }
 .main-nav ul {
   display: flex;
@@ -850,9 +856,9 @@ body.js-nav.show-nav {
     /* always show scrollbar above this breakpoint */
     overflow: auto !important;
   }
+  .main-nav,
   body.js-nav .main-nav {
     /* always show main-nav above this breakpoint */
-    display: block !important;
     transform: translate(0,0) !important;
   }
   body.js-nav .js-nav-toggle,
