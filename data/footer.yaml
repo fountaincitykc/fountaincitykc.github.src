@@ -15,6 +15,6 @@ elsewhere:
 - text: Youtube
   url: https://www.youtube.com/@fountaincitychurchkc9519/
   image: /images/ui/youtube.svg
-- text: Apple Podcasts
-  url: https://podcasts.apple.com/us/podcast/fountain-city-kc/id1528910234
-  image: /images/ui/apple-podcasts.svg
+- text: Podbean
+  url: https://fcckc.podbean.com/
+  image: /images/ui/podbean.svg
