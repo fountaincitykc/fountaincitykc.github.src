@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>{{ with .Title }}{{ . }} / {{ end }}{{ .Site.Title }}</title>
+    <title>{{ with .Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ if eq .Title "" }} | Prairie Village, KS{{ end }}</title>
     <meta name="description" content="Experience real community and meaningful relationships at Fountain City Church. Worship with Christ-centered followers who desire to know and glorify God and serve their community.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
